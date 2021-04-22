@@ -4,9 +4,36 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Login Mini-Market Express</title>
+        <link rel="stylesheet" href="css/login.css">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="title"><h1>Sing In Form</h1></div>
+	<div class="container">
+		<div class="left">
+			
+		</div>
+		
+		<div class="right">
+
+			<div class="box">
+				<center>
+				<form>
+					
+					<p>Username</p>
+					<input type="text" name="" placeholder="Enter your Username">
+					<p>Password</p>
+					<input type="Password" name="" placeholder="********">
+					<br>
+					<input type="submit" name="" value="Sing in">
+					<br>
+					<a href="#">Forget Your Password</a>
+					
+				</form>
+				<center>
+			</div>
+		</div>
+		
+	</div>
     </body>
 </html>
