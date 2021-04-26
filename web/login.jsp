@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/login.css">
     </head>
     <body>
-        <div class="title"><h1>Sing In Form</h1></div>
+        <div class="title"><h1>LOGIN MINIMARKET EXPRESS</h1></div>
 	<div class="container">
 		<div class="left">
 			
