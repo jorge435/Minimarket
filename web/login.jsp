@@ -18,17 +18,17 @@
 
 			<div class="box">
 				<center>
-				<form>
-					
+				<form>					
 					<p>Username</p>
 					<input type="text" name="" placeholder="Enter your Username">
 					<p>Password</p>
 					<input type="Password" name="" placeholder="********">
 					<br>
 					<input type="submit" name="" value="Sing in">
-					<br>
+					<br>					
+					<input type="submit" name="" value="Sing up">
+                                        <br>
 					<a href="#">Forget Your Password</a>
-					
 				</form>
 				<center>
 			</div>
