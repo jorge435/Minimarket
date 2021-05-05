@@ -24,9 +24,9 @@
 					<p>Password</p>
 					<input type="Password" name="" placeholder="********">
 					<br>
-					<input type="submit" name="" value="Sing in">
+					<input type="submit" name="" value="Ingresar">
 					<br>					
-					<input type="submit" name="" value="Sing up">
+					<input type="submit" name="" value="Registrar">
                                         <br>
 					<a href="#">Forget Your Password</a>
 				</form>
