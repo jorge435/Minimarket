@@ -24,7 +24,7 @@
 					<p>Password</p>
 					<input type="Password" name="" placeholder="********">
 					<br>
-					<input type="submit" name="" value="Ingresar">
+					<input type="submit" name="" value="Yanela fea">
 					<br>					
 					<input type="submit" name="" value="Registrar">
                                         <br>
