@@ -15,21 +15,19 @@
 		</div>
 		
 		<div class="right">
-
 			<div class="box">
 				<center>
-				<form>					
+                                    <form action="ValidarUsuario" method="post">					
 					<p>Username</p>
-					<input type="text" name="" placeholder="Enter your Username">
+					<input type="text" name="txtuser" placeholder="Enter your Username">
 					<p>Password</p>
-					<input type="Password" name="" placeholder="********">
+					<input type="password" name="txtpass" placeholder="********">
 					<br>
-					<input type="submit" name="" value="Yanela fea">
-					<br>					
-					<input type="submit" name="" value="Registrar">
-                                        <br>
-					<a href="#">Forget Your Password</a>
-				</form>
+					<input type="submit" name="accion" value="Ingresar">
+					<br>		
+								
+				    </form>
+                                    <a href="RegistroUsuario.jsp">Registrarse</a>
 				<center>
 			</div>
 		</div>
