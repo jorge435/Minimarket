@@ -1,11 +1,11 @@
-
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <title>Menu Minimarket</title>
     </head>
     <body>
@@ -18,14 +18,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Controlador?accion=Producto" target="looper">Home</a>
+          <a class="nav-link active" aria-current="page" href="Controlador?accion=home">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="Controlador?accion=Ofertas" target="looper">Ofertas del Dia</a>
+            <a class="nav-link active" href="Controlador?accion=Ofertas">Ofertas del Dia</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Carrito de Compras</a>
+          <a class="nav-link active" href="Controlador?accion=Carrito" tabindex="-1" aria-disabled="true">
+              <i class="fas fa-cart-plus">(<label style="color: darkorange">${cont}</label>)</i>
+              Carrito</a>
         </li>
         
        </ul>
@@ -44,22 +46,48 @@
           <a class="dropdown-item" href="#">${cliente.getApellidos()}</a>
           <a class="dropdown-item" href="login.jsp">Salir</a>
         </div>
-      </div>               
-               
+      </div>            
+              
        
     </div>
   </div>
-</nav>
-        
+</nav>   
+     
+     <div class="container mt-4">
+            <div class="row">                
+                <c:forEach var="p" items="${producto}">
+                    <div class="col-sm-3 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>${p.getNombre()}</h4>                            
+                        </div>
+                        <div class="card-body text-center">                            
+                            <img src="ControladorIMG?id=${p.getIdproducto()}" width="200" height="180">  
+                            ${p.getImagen()}
+                        </div>
+                        <div class="card-footer text-center">
+                             <i>S/. ${p.getPrecio()}</i>
+                             
+                             <br>
+                            <label>${p.getDescripcion()}</label>
+                            <div>
+                                <a href="Controlador?accion=AgregarCarrito&id=${p.getIdproducto()}" class="btn btn-outline-dark">Agregar a Carrito</a>
+                                
+                                <a href="#" class="btn btn-outline-dark">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </c:forEach>                
+            </div>
+        </div>     
+          
   
-          
-          
- <div class="m-4" style="height: 600px;">
-       <iframe name="looper" style="height: 100%; width: 100%;"></iframe>            
- </div>  
+ 
           
           
     </body>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
 </html>

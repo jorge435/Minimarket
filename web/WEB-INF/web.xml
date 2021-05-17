@@ -4,19 +4,25 @@
         <servlet-name>Controlador</servlet-name>
         <servlet-class>Controlador.Controlador</servlet-class>
     </servlet>
-    
     <servlet>
         <servlet-name>ValidarUsuario</servlet-name>
         <servlet-class>Controlador.ValidarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorIMG</servlet-name>
+        <servlet-class>Controlador.ControladorIMG</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>ValidarUsuario</servlet-name>
         <url-pattern>/ValidarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorIMG</servlet-name>
+        <url-pattern>/ControladorIMG</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
