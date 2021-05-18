@@ -1,27 +1,29 @@
 
 package modelo;
 
-import java.io.InputStream;
+
 
 public class Producto {
     
-    private int idproducto;
-    private String nombre;
-    private String imagen;
-    private String descripcion;
-    private double precio;
-    private int stock;
+     int idproducto;
+   String nombre;
+    String imagen;
+     String descripcion;
+     double precio;
+     int stock;
+     int item;
 
     public Producto() {
     }
 
-    public Producto(int idproducto, String nombre, String imagen, String descripcion, double precio, int stock) {
+    public Producto(int idproducto, String nombre, String imagen, String descripcion, double precio, int stock, int item) {
         this.idproducto = idproducto;
         this.nombre = nombre;
         this.imagen = imagen;
         this.descripcion = descripcion;
         this.precio = precio;
         this.stock = stock;
+        this.item = item;
     }
 
     public int getIdproducto() {
@@ -71,6 +73,17 @@ public class Producto {
     public void setStock(int stock) {
         this.stock = stock;
     }
+
+    public int getItem() {
+        return item;
+    }
+
+    public void setItem(int item) {
+        this.item = item;
+    }
+
+    
+    
     
     
         

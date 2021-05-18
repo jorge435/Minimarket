@@ -1,4 +1,5 @@
 
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -60,7 +61,7 @@
                         <thead class="table-primary">
                             <tr class="text-center">
                                 <th>Item</th>                               
-                                <th>Articulo</th>
+                                <th>Nombre</th>
                                 <th>Descripcion</th>
                                 <th>Precio</th>
                                 <th>Cantidad</th>                       
@@ -69,21 +70,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <c:forEach var="c" items="${Carrito}" varStatus="iterator"> 
+                            <c:forEach var="c" items="${car}" varStatus="iterator"> 
                                 <tr class="text-center tr">
                                     <td>${iterator.index+1}</td>                                   
-                                    <td>${c.getNombres()}
-                                        <img src="${c.getImagen()}" width="130" height="110">
+                                    <td>${c.getNom()}
+                                        <img src="${c.getImag()}" width="130" height="110">
                                     </td>
-                                    <td>${c.getDescripcion()}</td>
+                                    <td>${c.getDescrip()}</td>
                                     <td>${c.getPrecioCompra()}</td>
                                     <td>        
-                                        <input type="hidden" id="item1" value="${c.getIdProducto()}">
+                                        <input type="hidden" id="item1" value="${c.getIdProduct()}">
                                         <input type="number" min="1" max="10"  id="Cant" class=" form-control text-center" value="${c.getCantidad()}">
                                     </td>   
                                     <td>${c.getSubTotal()}</td>                           
                                     <td class="text-center">                                         
-                                        <input type="hidden" id="item2" value="${c.getIdProducto()}">
+                                        <input type="hidden" id="item2" value="${c.getIdProduct()}">
                                         <a id="deleteItem" href="#" class="btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>                                            
                                     </td>                           
                                 </tr>
@@ -98,13 +99,13 @@
                         </div>
                         <div class="card-body">
                             <label>Subtotal:</label>
-                            <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> ${totalPagar}0</i></a>
+                            <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> ${totalpago}0</i></a>
                             <label>Precio Envio:</label>
                             <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> 0.00</i></a>
                             <label>Descuento:</label>
                             <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> 0.00</i></a>
                             <label>Total a Pagar:</label>
-                            <a class="form-control text-center"><i class="fas fa-dollar-sign h4 primary"> ${totalPagar}0</i></a>
+                            <a class="form-control text-center"><i class="fas fa-dollar-sign h4 primary"> ${totalpago}0</i></a>
                         </div>
                         <div class="card-footer">
                             <a href="Controlador?accion=GenerarCompra" class="btn btn-dark btn-block">Generar Compra</a>

@@ -26,7 +26,7 @@ public class ValidarUsuario extends HttpServlet {
             u=udao.Validar(user, pass);
             if(u.getUsuario()!=null){
                 request.setAttribute("cliente", u);
-                request.getRequestDispatcher("Controlador?accion=Principal").forward(request, response);
+                request.getRequestDispatcher("Controlador?accion=home").forward(request, response);
             }else{
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }

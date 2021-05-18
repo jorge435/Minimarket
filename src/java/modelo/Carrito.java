@@ -2,24 +2,24 @@
 package modelo;
 
 public class Carrito {
-    int item;
-    int idProduct;
-    String nombres;
-    String imagen;
-    String descripcion;
-    double precioCompra;
-    int cantidad;
-    double subTotal;
+    private int item;
+    private int idProduct;
+    private String nom;
+    private String imag;
+    private String descrip;
+    private double precioCompra;
+    private int cantidad;
+    private double subTotal;
 
     public Carrito() {
     }
 
-    public Carrito(int item, int idProduct, String nombres, String imagen, String descripcion, double precioCompra, int cantidad, double subTotal) {
+    public Carrito(int item, int idProduct, String nom, String imag, String descrip, double precioCompra, int cantidad, double subTotal) {
         this.item = item;
         this.idProduct = idProduct;
-        this.nombres = nombres;
-        this.imagen = imagen;
-        this.descripcion = descripcion;
+        this.nom = nom;
+        this.imag = imag;
+        this.descrip = descrip;
         this.precioCompra = precioCompra;
         this.cantidad = cantidad;
         this.subTotal = subTotal;
@@ -41,28 +41,28 @@ public class Carrito {
         this.idProduct = idProduct;
     }
 
-    public String getNombres() {
-        return nombres;
+    public String getNom() {
+        return nom;
     }
 
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getImagen() {
-        return imagen;
+    public String getImag() {
+        return imag;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setImag(String imag) {
+        this.imag = imag;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDescrip() {
+        return descrip;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescrip(String descrip) {
+        this.descrip = descrip;
     }
 
     public double getPrecioCompra() {
@@ -88,6 +88,9 @@ public class Carrito {
     public void setSubTotal(double subTotal) {
         this.subTotal = subTotal;
     }
+
+    
+    
 
     
     

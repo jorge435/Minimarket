@@ -21,39 +21,103 @@ public class Controlador extends HttpServlet {
     
     
     //listar carrito
-    List<Carrito> listaCarrito = new ArrayList<>();
+    List<Carrito> listacarrito = new ArrayList<>();
     int item;
     int cantidad = 1;
     double subtotal = 0.0;
     double totalPagar = 0.0;
+    //globales variables 
+    int idp;
+    Carrito cu;
     
+
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {        
             String accion = request.getParameter("accion");
             producto=pimpl.listarproductos();
-            switch (accion) {
-                case "Principal":                                                  
-                    request.getRequestDispatcher("Controlador?accion=home").forward(request, response);
-                    break;
-                case "AgregarCarrito":
-                    int idp = Integer.parseInt(request.getParameter("id"));
+            switch (accion) {                
+                case "Comprar":
+                    totalPagar = 0.0;
+                    idp = Integer.parseInt(request.getParameter("id"));
                     p=pimpl.listarId(idp);
                     item=item+1;
-                    Carrito cu = new Carrito();
+                    String name = p.getNombre();
+                    //use variable global
+                    cu = new Carrito();
+                    //lista
                     cu.setItem(item);
                     cu.setIdProduct(p.getIdproducto());
-                    cu.setNombres(p.getNombre());
-                    cu.setDescripcion(p.getDescripcion());
+                    cu.setNom(p.getNombre());
+                    cu.setImag(p.getImagen());
+                    cu.setDescrip(p.getDescripcion());
                     cu.setPrecioCompra(p.getPrecio());
                     cu.setCantidad(cantidad);
                     cu.setSubTotal(cantidad*p.getPrecio());
-                    listaCarrito.add(cu);    
-                    request.setAttribute("cont", listaCarrito.size());
+                    listacarrito.add(cu);    
+                    for (int i = 0; i < listacarrito.size(); i++) {
+                    totalPagar = totalPagar + listacarrito.get(i).getSubTotal();
+                    }
+                    request.setAttribute("totalpago", totalPagar);
+                    request.setAttribute("car", listacarrito) ; 
+                    request.setAttribute("cont", listacarrito.size());
+                    request.getRequestDispatcher("carrito.jsp").forward(request, response);
+                    break;
+                case "AgregarCarrito":
+                    //agregando cantidad
+                    int pos = 0;
+                    cantidad = 1;
+                    idp = Integer.parseInt(request.getParameter("id"));
+                    p=pimpl.listarId(idp);
+                    
+                    if(listacarrito.size()>0){
+                        for (int i = 0; i < listacarrito.size(); i++) {
+                            if(idp==listacarrito.get(i).getIdProduct()){
+                                pos=i;
+                            }
+                        }
+                        if(idp==listacarrito.get(pos).getIdProduct()){
+                            cantidad=listacarrito.get(pos).getCantidad()+cantidad;
+                            double subtotal = listacarrito.get(pos).getPrecioCompra()*cantidad;
+                            listacarrito.get(pos).setCantidad(cantidad);
+                            listacarrito.get(pos).setSubTotal(subtotal);
+                        }
+                        else{
+                            item=item+1;                    
+                            cu = new Carrito();
+                            cu.setItem(item);
+                            cu.setIdProduct(p.getIdproducto());
+                            cu.setNom(p.getNombre());
+                            cu.setImag(p.getImagen());
+                            cu.setDescrip(p.getDescripcion());
+                            cu.setPrecioCompra(p.getPrecio());
+                            cu.setCantidad(cantidad);
+                            cu.setSubTotal(cantidad*p.getPrecio());
+                            listacarrito.add(cu);
+                        }
+                    }else{
+                    item=item+1;                    
+                    cu = new Carrito();
+                    cu.setItem(item);
+                    cu.setIdProduct(p.getIdproducto());
+                    cu.setNom(p.getNombre());
+                    cu.setImag(p.getImagen());
+                    cu.setDescrip(p.getDescripcion());
+                    cu.setPrecioCompra(p.getPrecio());
+                    cu.setCantidad(cantidad);
+                    cu.setSubTotal(cantidad*p.getPrecio());
+                    listacarrito.add(cu);
+                    }                                 
+                                          
+                    request.setAttribute("cont", listacarrito.size());
                     request.getRequestDispatcher("Controlador?accion=home").forward(request, response);
                     break;
-                case "Carrito":
-                    totalPagar=0.0;
-                    request.setAttribute("carrito", listaCarrito);
+                case "carrito":
+                    totalPagar = 0.0;
+                    request.setAttribute("car", listacarrito) ; 
+                    for (int i = 0; i < listacarrito.size(); i++) {
+                    totalPagar = totalPagar + listacarrito.get(i).getSubTotal();
+                    }
+                    request.setAttribute("totalpago", totalPagar);
                     request.getRequestDispatcher("carrito.jsp").forward(request, response);
                     break;      
                 default:
@@ -63,7 +127,15 @@ public class Controlador extends HttpServlet {
             }
                      
         }
+    
+    
+
+
+    
+    
     }
+
+
 
    
 

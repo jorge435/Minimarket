@@ -25,7 +25,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link active" href="Controlador?accion=Carrito" tabindex="-1" aria-disabled="true">
+          <a class="nav-link active" href="Controlador?accion=carrito" tabindex="-1" aria-disabled="true">
               <i class="fas fa-cart-plus">(<label style="color: darkorange">${cont}</label>)</i>
               Carrito</a>
         </li>
@@ -55,15 +55,15 @@
      
      <div class="container mt-4">
             <div class="row">                
-                <c:forEach var="p" items="${producto}">
+                <c:forEach var="p" items="${producto}" >
                     <div class="col-sm-3 ">
                     <div class="card">
                         <div class="card-header">
                             <h4>${p.getNombre()}</h4>                            
                         </div>
                         <div class="card-body text-center">                            
-                            <img src="ControladorIMG?id=${p.getIdproducto()}" width="200" height="180">  
-                            ${p.getImagen()}
+                            <img src="${p.getImagen()}" width="200" height="180">  
+                            
                         </div>
                         <div class="card-footer text-center">
                              <i>S/. ${p.getPrecio()}</i>
@@ -73,11 +73,11 @@
                             <div>
                                 <a href="Controlador?accion=AgregarCarrito&id=${p.getIdproducto()}" class="btn btn-outline-dark">Agregar a Carrito</a>
                                 
-                                <a href="#" class="btn btn-outline-dark">Comprar</a>
+                                <a href="Controlador?accion=Comprar&id=${p.getIdproducto()}" class="btn btn-outline-dark">Comprar</a>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                             
                 </c:forEach>                
             </div>
         </div>     
