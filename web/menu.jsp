@@ -26,7 +26,7 @@
         
         <li class="nav-item">
           <a class="nav-link active" href="Controlador?accion=carrito" tabindex="-1" aria-disabled="true">
-              <i class="fas fa-cart-plus">(<label style="color: darkorange">${cont}</label>)</i>
+              <i class="fas fa-cart-plus">(<label style="color: #e65c00">${cont}</label>)</i>
               Carrito</a>
         </li>
         
@@ -56,7 +56,7 @@
      <div class="container mt-4">
             <div class="row">                
                 <c:forEach var="p" items="${producto}" >
-                    <div class="col-sm-3 ">
+                    <div class="col-sm-3 " style="margin-bottom: 20px;">
                     <div class="card">
                         <div class="card-header">
                             <h4>${p.getNombre()}</h4>                            
@@ -70,22 +70,21 @@
                              
                              <br>
                             <label>${p.getDescripcion()}</label>
-                            <div>
+                            <div class=" col-lg-12 text-center">
                                 <a href="Controlador?accion=AgregarCarrito&id=${p.getIdproducto()}" class="btn btn-outline-dark">Agregar a Carrito</a>
                                 
                                 <a href="Controlador?accion=Comprar&id=${p.getIdproducto()}" class="btn btn-outline-dark">Comprar</a>
                             </div>
-                        </div>
+                        </div>                              
                     </div>
-                </div>                             
-                </c:forEach>                
+                </div>  
+                
+              </c:forEach>  
+                    
             </div>
-        </div>     
-          
-  
+        </div>
+         
  
-          
-          
     </body>
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

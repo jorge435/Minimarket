@@ -79,13 +79,14 @@
                                     <td>${c.getDescrip()}</td>
                                     <td>${c.getPrecioCompra()}</td>
                                     <td>        
-                                        <input type="hidden" id="item1" value="${c.getIdProduct()}">
-                                        <input type="number" min="1" max="10"  id="Cant" class=" form-control text-center" value="${c.getCantidad()}">
+                                        <input type="hidden" id="idp" value="${c.getIdProduct()}">
+                                        <input type="number" id="Cantidad"  value="${c.getCantidad()}"  min="1" max="20" class=" form-control text-center">
                                     </td>   
                                     <td>${c.getSubTotal()}</td>                           
                                     <td class="text-center">                                         
-                                        <input type="hidden" id="item2" value="${c.getIdProduct()}">
-                                        <a id="deleteItem" href="#" class="btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>                                            
+                                        <input type="hidden" id="idp1" value="${c.getIdProduct()}">
+                                        <a  href="Controlador?accion=Delete&idp=${c.getItem()}" id="btnDelete"><i class="fas fa-trash-alt"></i></a>
+                                                                                
                                     </td>                           
                                 </tr>
                             </c:forEach>
@@ -108,14 +109,23 @@
                             <a class="form-control text-center"><i class="fas fa-dollar-sign h4 primary"> ${totalpago}0</i></a>
                         </div>
                         <div class="card-footer">
-                            <a href="Controlador?accion=GenerarCompra" class="btn btn-dark btn-block">Generar Compra</a>
-                            <a href="#" class="btn btn-dark btn-block">Realizar Pago</a>
+                            <a href="Controlador?accion=GenerarCompra" class="btn btn-warning btn-block">Generar Compra</a>
+                            <a href="#" class="btn btn-outline-danger btn-block">Realizar Pago</a>
                         </div>
                     </div>
                 </div>
             </div>          
         </div>      
           
-    </body>
+    </body> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+    <script src="js/cantidad.js" type="text/javascript"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </html>

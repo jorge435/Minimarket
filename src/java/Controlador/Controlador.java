@@ -111,6 +111,17 @@ public class Controlador extends HttpServlet {
                     request.setAttribute("cont", listacarrito.size());
                     request.getRequestDispatcher("Controlador?accion=home").forward(request, response);
                     break;
+                case "ActualizarCantidad":
+                    int idpro = Integer.parseInt(request.getParameter("id"));
+                    int cant= Integer.parseInt(request.getParameter("Cantidad"));
+                    for (int i = 0; i < listacarrito.size(); i++) {
+                        if(listacarrito.get(i).getIdProduct()==idpro){
+                            listacarrito.get(i).setCantidad(cant);
+                            listacarrito.get(i).setSubTotal(listacarrito.get(i).getPrecioCompra() * cant);
+                        }
+                    }
+                    request.getRequestDispatcher("Controlador?accion=carrito").forward(request, response);                  
+                    break;    
                 case "carrito":
                     totalPagar = 0.0;
                     request.setAttribute("car", listacarrito) ; 
@@ -119,7 +130,17 @@ public class Controlador extends HttpServlet {
                     }
                     request.setAttribute("totalpago", totalPagar);
                     request.getRequestDispatcher("carrito.jsp").forward(request, response);
-                    break;      
+                    break;  
+                case "Delete":
+                     int idproducto=Integer.parseInt(request.getParameter("idp"));
+                        for (int i = 0; i <listacarrito.size(); i++) {
+                              if(listacarrito.get(i).getItem()==idproducto){
+                                    listacarrito.remove(i);
+                              }
+                        }                        
+                        request.getRequestDispatcher("Controlador?accion=carrito").forward(request, response);
+                        break;
+                    
                 default:
                     request.setAttribute("producto", producto);                 
                     request.getRequestDispatcher("menu.jsp").forward(request, response);

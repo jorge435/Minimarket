@@ -16,7 +16,7 @@
                 <img src="img/bg.svg">
             </div>
             <div class="login-content">
-                <form action="index.html">
+                <form action="Servicios">
                     <h1 class="title">Completa el siguiente formulario</h1>
                     <hr><br>
                     <div class="input-div one">
@@ -25,7 +25,7 @@
                         </div>
                         <div class="div">
                             <h5>Nombre</h5>
-                            <input type="text" class="input">
+                            <input type="text" name="txtname"class="input">
                         </div>
                     </div>
                     <div class="input-div one">
@@ -34,7 +34,7 @@
                         </div>
                         <div class="div">
                             <h5>Apellidos</h5>
-                            <input type="text" class="input">
+                            <input type="text" name="txtape" class="input">
                         </div>
                     </div>
                     <div class="input-div one">
@@ -43,7 +43,7 @@
                         </div>
                         <div class="div">
                             <h5>DNI</h5>
-                            <input type="text" class="input">
+                            <input type="text" name="txtdni" class="input">
                         </div>
                     </div>
                     <div class="input-div one">
@@ -52,7 +52,7 @@
                         </div>
                         <div class="div">
                             <h5>Username</h5>
-                            <input type="text" class="input">
+                            <input type="text" name="txtuser"class="input">
                         </div>
                     </div>
                     <div class="input-div pass">
@@ -61,11 +61,42 @@
                         </div>
                         <div class="div">
                             <h5>Password</h5>
-                            <input type="password" class="input">
+                            <input type="password" name="txtpass" class="input">
                         </div>
                     </div>
                     
-                    <input type="submit" class="btn" value="Guardar">
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Direccion</h5>
+                            <input type="password" name="txtdirec" class="input">
+                        </div>
+                    </div>
+                    
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Email</h5>
+                            <input type="password" name="txtemail" class="input">
+                        </div>
+                    </div>
+                    
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Telefoo</h5>
+                            <input type="password" name="txtef" class="input">
+                        </div>
+                    </div>
+                    
+                    <input type="submit" class="btn" name="accion" value="Guardar">
+                    <a href="login.jsp">Regresar</a>
                 </form>
             </div>
         </div>
