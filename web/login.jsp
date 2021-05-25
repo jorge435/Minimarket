@@ -27,7 +27,7 @@
 					<br>		
 								
 				    </form>
-                                    <a href="RegistroUsuario.jsp">Registrarse</a>
+                                    <a href="RegistroUsuario.jsp">Registrar</a>
 				<center>
 			</div>
 		</div>
