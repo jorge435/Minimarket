@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.Carrito;
 import modelo.Producto;
-import modelo.ProductoImpl;
+import Implements.ProductoImpl;
 
 
 public class Controlador extends HttpServlet {
