@@ -16,6 +16,14 @@
         <servlet-name>Servicios</servlet-name>
         <servlet-class>Controlador.Servicios</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ValidarEmpleado</servlet-name>
+        <servlet-class>Controlador.ValidarEmpleado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorEmp</servlet-name>
+        <servlet-class>Controlador.ControladorEmp</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>Servicios</servlet-name>
         <url-pattern>/Servicios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ValidarEmpleado</servlet-name>
+        <url-pattern>/ValidarEmpleado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorEmp</servlet-name>
+        <url-pattern>/ControladorEmp</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

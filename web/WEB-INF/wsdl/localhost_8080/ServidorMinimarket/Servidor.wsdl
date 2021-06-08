@@ -16,6 +16,18 @@
 <message name="listarResponse">
 <part name="parameters" element="tns:listarResponse"/>
 </message>
+<message name="Eliminar">
+<part name="parameters" element="tns:Eliminar"/>
+</message>
+<message name="EliminarResponse">
+<part name="parameters" element="tns:EliminarResponse"/>
+</message>
+<message name="listarid">
+<part name="parameters" element="tns:listarid"/>
+</message>
+<message name="listaridResponse">
+<part name="parameters" element="tns:listaridResponse"/>
+</message>
 <portType name="Servidor">
 <operation name="add">
 <input wsam:Action="http://WebServices/Servidor/addRequest" message="tns:add"/>
@@ -24,6 +36,14 @@
 <operation name="listar">
 <input wsam:Action="http://WebServices/Servidor/listarRequest" message="tns:listar"/>
 <output wsam:Action="http://WebServices/Servidor/listarResponse" message="tns:listarResponse"/>
+</operation>
+<operation name="Eliminar">
+<input wsam:Action="http://WebServices/Servidor/EliminarRequest" message="tns:Eliminar"/>
+<output wsam:Action="http://WebServices/Servidor/EliminarResponse" message="tns:EliminarResponse"/>
+</operation>
+<operation name="listarid">
+<input wsam:Action="http://WebServices/Servidor/listaridRequest" message="tns:listarid"/>
+<output wsam:Action="http://WebServices/Servidor/listaridResponse" message="tns:listaridResponse"/>
 </operation>
 </portType>
 <binding name="ServidorPortBinding" type="tns:Servidor">
@@ -38,6 +58,24 @@
 </output>
 </operation>
 <operation name="listar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Eliminar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="listarid">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

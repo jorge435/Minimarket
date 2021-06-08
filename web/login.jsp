@@ -25,7 +25,7 @@
 					<br>
 					<input type="submit" name="accion" value="Ingresar">
 					<br>		
-								
+                                        		
 				    </form>
                                     <a href="RegistroUsuario.jsp">Registrar</a>
 				<center>

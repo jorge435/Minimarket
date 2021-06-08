@@ -1,6 +1,8 @@
 
 package Servicios;
 
+import webservices.Cliente;
+
 public class ClienteService {
 
     public ClienteService() {
@@ -18,5 +20,19 @@ public class ClienteService {
         webservices.Servidor port = service.getServidorPort();
         return port.add(apellidos, direccion, email, nombre, numDoc, password, telefono, usuario);
     }
+
+    public Cliente eliminar(int id) {
+        webservices.Servidor_Service service = new webservices.Servidor_Service();
+        webservices.Servidor port = service.getServidorPort();
+        return port.eliminar(id);
+    }
+
+    public Cliente listarid(int id) {
+        webservices.Servidor_Service service = new webservices.Servidor_Service();
+        webservices.Servidor port = service.getServidorPort();
+        return port.listarid(id);
+    }
+    
+    
     
 }

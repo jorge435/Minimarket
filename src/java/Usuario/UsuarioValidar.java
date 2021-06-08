@@ -5,6 +5,9 @@ import Usuario.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+import modelo.Cliente;
 import modelo.Conexion;
 
 public class UsuarioValidar {
@@ -35,4 +38,34 @@ public class UsuarioValidar {
         }
         return u;
     }
+    
+    public List Buscar (String name){
+        List<Cliente> lista = new ArrayList<>();
+        String sql = "select * from clientes where id_cliente like '%"+name+"%' or nombre like '%"+name+"%' or apellidos like '%"+name+"%'";
+        try{
+         con=cn.Conexion();   
+         ps=con.prepareStatement(sql);
+         rs=ps.executeQuery();
+         while(rs.next()){  
+                   Cliente u = new Cliente();
+                   u.setId_cliente(rs.getInt("id_cliente"));
+                   u.setApellidos(rs.getString("apellidos"));
+                   u.setDireccion(rs.getString("direccion"));
+                   u.setEmail(rs.getString("email"));
+                   u.setNombre(rs.getString("nombre"));
+                   u.setNum_doc(rs.getString("num_doc"));
+                   u.setPassword(rs.getString("password"));
+                   u.setTelefono(rs.getString("telefono"));
+                   u.setUsuario(rs.getString("usuario"));
+                   lista.add(u);                   
+               }
+        
+        }catch(Exception e){
+            e.getMessage();
+        }
+        return lista;
+             
+                  
+    }
+    
 }

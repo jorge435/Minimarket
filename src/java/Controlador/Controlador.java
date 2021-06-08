@@ -139,11 +139,11 @@ public class Controlador extends HttpServlet {
                               }
                         }                        
                         request.getRequestDispatcher("Controlador?accion=carrito").forward(request, response);
-                        break;
-                    
+                        break;                
                 default:
                     request.setAttribute("producto", producto);                 
-                    request.getRequestDispatcher("menu.jsp").forward(request, response);
+                    request.getRequestDispatcher("menu.jsp").forward(request, response);    
+                        
                     
             }
                      

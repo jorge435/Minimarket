@@ -1,6 +1,8 @@
 
 package Controlador;
 
+import Usuario.Empleado;
+import Usuario.EmpleadoValidar;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -14,6 +16,9 @@ public class ValidarUsuario extends HttpServlet {
     
     UsuarioValidar udao = new UsuarioValidar();
     Usuario u = new Usuario();
+    
+    EmpleadoValidar emp = new EmpleadoValidar();
+    Empleado em= new Empleado();
 
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -24,10 +29,17 @@ public class ValidarUsuario extends HttpServlet {
             String user=request.getParameter("txtuser");
             String pass=request.getParameter("txtpass");
             u=udao.Validar(user, pass);
+            em=emp.ValidarEmp(user, pass);
             if(u.getUsuario()!=null){
                 request.setAttribute("cliente", u);
                 request.getRequestDispatcher("Controlador?accion=home").forward(request, response);
-            }else{
+            }            
+            else if(em.getUsuario()!=null){
+                request.setAttribute("empleado", em);
+                request.getRequestDispatcher("ControladorEmp?accion=home1").forward(request, response);
+                
+                }
+            else{
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }
         }else{
@@ -55,6 +67,10 @@ public class ValidarUsuario extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Short description";
+    }
+
+    private void response(String nombre, String valido) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
