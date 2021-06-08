@@ -25,7 +25,7 @@
         </li>
         
         <li class="nav-item">
-            <a class="nav-link active" href="#">Configuraciones</a>
+            <a class="nav-link active" href="#">Config</a>
         </li>
         <%--
         <li class="nav-item">
