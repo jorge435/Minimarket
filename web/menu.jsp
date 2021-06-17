@@ -21,18 +21,53 @@
           <a class="nav-link active" aria-current="page" href="Controlador?accion=home">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="Controlador?accion=Ofertas">Ofertas del Dia</a>
+         <div class="dropdown me-3" style="margin-left:20px;">
+             <button  style="border: none"class="btn btn-outline-light   dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Categorias
+        </button>
+        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+      <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Bebidas" style="background: white; color: black; border: none" >Bebidas</button>
+      </form>
+            ---------------------
+      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Carnes" style="background: white; color: black; border: none" >Carnes</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+      </form> 
+      <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+      </form>
+        </div>
+      </div>
+        
         </li>
         
         <li class="nav-item">
           <a class="nav-link active" href="Controlador?accion=carrito" tabindex="-1" aria-disabled="true">
               <i class="fas fa-cart-plus">(<label style="color: #e65c00">${cont}</label>)</i>
-              Carrito</a>
+              </a>
         </li>
         
        </ul>
         
-       <form class="d-flex" style="margin-right: 500px;" action="Controlador">
+       <form class="d-flex" style="margin-right: 120px; width: 810px" action="Controlador">
         <input class="form-control me-1" type="search"  name="txtbuscar" placeholder="Buscar Productos" aria-label="Search">
         <button class="btn btn-outline-light" type="submit" name="accion" value="Buscar" style="border: none">Buscar</button>
        </form>
@@ -51,38 +86,11 @@
        
     </div>
   </div>
+
 </nav>   
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-      <form class="d-flex" action="Controlador" style="margin-left:30px;">        
-        <button class="btn btn-outline-light" type="submit" name="accion" value="Bebidas" style="background: #999; color: white" >Bebidas</button>
-      </form>
-      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-light" type="submit" name="accion" value="Carnes" style="background: #999; color: white" >Carnes</button>
-      </form>  
-      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
-      </form> 
-      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
-      </form>  
-      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
-      </form>  
-      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
-      </form>  
-      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
-      </form>  
-      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
-      </form>  
-      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
-      </form>    
-        
-        
-      <div class="dropdown me-3" style="margin-left:300px;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">       
+               
+      <div class="dropdown me-3" style="margin-left:1300px;">
         <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           Ordenar Por
         </button>
