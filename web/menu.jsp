@@ -32,7 +32,7 @@
         
        </ul>
         
-       <form class="d-flex" style="margin-right: 500px;">
+       <form class="d-flex" style="margin-right: 500px;" action="Controlador">
         <input class="form-control me-1" type="search"  name="txtbuscar" placeholder="Buscar Productos" aria-label="Search">
         <button class="btn btn-outline-light" type="submit" name="accion" value="Buscar" style="border: none">Buscar</button>
        </form>
@@ -52,6 +52,51 @@
     </div>
   </div>
 </nav>   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+      <form class="d-flex" action="Controlador" style="margin-left:30px;">        
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Bebidas" style="background: #999; color: white" >Bebidas</button>
+      </form>
+      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Carnes" style="background: #999; color: white" >Carnes</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
+      </form> 
+      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
+      </form>  
+      <form class="d-flex" action="Controlador" style="margin-left:20px;">        
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Lacteos" style="background: #999; color: white" >Lacteos</button>
+      </form>    
+        
+        
+      <div class="dropdown me-3" style="margin-left:300px;">
+        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Ordenar Por
+        </button>
+        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+          <form class="d-flex" action="Controlador" style="margin-left:20px;">
+          <button style="border: none"class="btn btn-outline-dark" type="submit" name="accion" value="Menor">Menor Precio</button>
+          </form> 
+          <form class="d-flex" action="Controlador" style="margin-left:20px; border: none">
+          <button style="border: none" class="btn btn-outline-dark" type="submit" name="accion" value="Mayor">Mayor Precio</button>
+          </form> 
+        </div>
+      </div>  
+    </nav>    
+          
      
      <div class="container mt-4">
             <div class="row">                

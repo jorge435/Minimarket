@@ -24,7 +24,7 @@
                 </div>
                 <form class="form" action="ControladorEmp">
                     <input type="search" name="txtbuscar" >
-                    <input type="submit" name="accion" value="Buscar" class="btn btn-outline-warning"">
+                    <input type="submit" name="accion" value="Buscar" class="btn btn-outline-warning">
                 </form>
                 
                 

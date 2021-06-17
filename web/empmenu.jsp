@@ -21,13 +21,13 @@
           <a class="nav-link active" aria-current="page" href="ControladorEmp?accion=home1">Inicio<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="ControladorEmp?accion=ListarCliente">Listar Cliente</a>
+            <a class="nav-link active" href="ControladorEmp?accion=ListarCliente">Cliente</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="ControladorEmp?accion=">Registro Productos</a>
+            <a class="nav-link active" href="ControladorEmp?accion="> Productos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="ControladorEmp?accion=">Registro Proveedores</a>
+            <a class="nav-link active" href="ControladorEmp?accion=">Proveedores</a>
         </li>
         
         <li class="nav-item">
@@ -80,11 +80,7 @@
                              
                              <br>
                             <label>${p.getDescripcion()}</label>
-                            <div class=" col-lg-12 text-center">
-                                <a href="Controlador?accion=AgregarCarrito&id=${p.getIdproducto()}" class="btn btn-outline-dark">Agregar a Carrito</a>
-                                
-                                <a href="Controlador?accion=Comprar&id=${p.getIdproducto()}" class="btn btn-outline-dark">Comprar</a>
-                            </div>
+                            
                         </div>                              
                     </div>
                 </div>  

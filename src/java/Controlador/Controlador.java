@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import modelo.Carrito;
 import modelo.Producto;
 import Implements.ProductoImpl;
+import Implements.ProductoMayorMenor;
 
 
 public class Controlador extends HttpServlet {
@@ -29,6 +30,13 @@ public class Controlador extends HttpServlet {
     //globales variables 
     int idp;
     Carrito cu;
+    
+    //busqueda producto
+    ProductoImpl buscarproducto= new ProductoImpl();
+    
+    //ODENAR MAYOR A MENOR
+    ProductoMayorMenor meyormenor= new ProductoMayorMenor();
+    
     
 
     protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -139,7 +147,45 @@ public class Controlador extends HttpServlet {
                               }
                         }                        
                         request.getRequestDispatcher("Controlador?accion=carrito").forward(request, response);
-                        break;                
+                        break;
+                        
+                case "Buscar":
+                String dato = request.getParameter("txtbuscar");
+                List<Producto> lista  = buscarproducto.Buscar(dato);
+                request.setAttribute("producto", lista); 
+                request.getRequestDispatcher("menu.jsp").forward(request, response);
+                break;
+                
+                case "Bebidas":
+                List<Producto> lista1  = buscarproducto.CategoriaBebidas();
+                request.setAttribute("producto", lista1); 
+                request.getRequestDispatcher("menu.jsp").forward(request, response);
+                break; 
+                
+                case "Carnes":
+                List<Producto> lista2  = buscarproducto.CategoriaCarnes();
+                request.setAttribute("producto", lista2); 
+                request.getRequestDispatcher("menu.jsp").forward(request, response);
+                break; 
+                
+                case "Lacteos":
+                List<Producto> lista3  = buscarproducto.CategoriaLacteos();
+                request.setAttribute("producto", lista3); 
+                request.getRequestDispatcher("menu.jsp").forward(request, response);
+                break;
+                
+                case "Menor":
+                List<Producto> lista4  = meyormenor.OrdenarMenor();
+                request.setAttribute("producto", lista4); 
+                request.getRequestDispatcher("menu.jsp").forward(request, response);
+                break;
+                
+                case "Mayor":
+                List<Producto> lista5 = meyormenor.OrdenarMayor();
+                request.setAttribute("producto", lista5); 
+                request.getRequestDispatcher("menu.jsp").forward(request, response);
+                break;
+                        
                 default:
                     request.setAttribute("producto", producto);                 
                     request.getRequestDispatcher("menu.jsp").forward(request, response);    

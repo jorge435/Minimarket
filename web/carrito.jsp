@@ -100,13 +100,13 @@
                         </div>
                         <div class="card-body">
                             <label>Subtotal:</label>
-                            <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> ${totalpago}0</i></a>
+                            <a class="form-control text-center">S/ ${totalpago}0</a>
                             <label>Precio Envio:</label>
-                            <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> 0.00</i></a>
+                            <a class="form-control text-center"> S/ 0.00</a>
                             <label>Descuento:</label>
-                            <a class="form-control text-center"><i class="fas fa-dollar-sign h5"> 0.00</i></a>
+                            <a class="form-control text-center">S/ 0.00</a>
                             <label>Total a Pagar:</label>
-                            <a class="form-control text-center"><i class="fas fa-dollar-sign h4 primary"> ${totalpago}0</i></a>
+                            <a class="form-control text-center">S/ ${totalpago}0</a>
                         </div>
                         <div class="card-footer">
                             <a href="Controlador?accion=GenerarCompra" class="btn btn-warning btn-block">Generar Compra</a>
