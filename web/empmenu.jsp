@@ -23,6 +23,12 @@
         <li class="nav-item">
             <a class="nav-link active" href="ControladorEmp?accion=ListarCliente">Listar Cliente</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="ControladorEmp?accion=">Registro Productos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="ControladorEmp?accion=">Registro Proveedores</a>
+        </li>
         
         <li class="nav-item">
             <a class="nav-link active" href="#">Config</a>

@@ -32,9 +32,9 @@
         
        </ul>
         
-       <form class="d-flex">
-        <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
-        <%--button class="btn btn-outline-light" type="submit">Buscar</button--%>
+       <form class="d-flex" style="margin-right: 500px;">
+        <input class="form-control me-1" type="search"  name="txtbuscar" placeholder="Buscar Productos" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Buscar" style="border: none">Buscar</button>
        </form>
         
        <div class="dropdown me-3">

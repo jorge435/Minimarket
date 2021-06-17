@@ -40,8 +40,7 @@ public class ControladorEmp extends HttpServlet {
         producto=pimpl.listarproductos();
         switch (accion) {         
                               
-            case "ListarCliente":   
-                
+            case "ListarCliente": 
                 request.getRequestDispatcher("listarcliente.jsp").forward(request, response);
                 break;
             case "Delete":
@@ -51,12 +50,12 @@ public class ControladorEmp extends HttpServlet {
                 break;  
             case "Buscar":
                 String dato = request.getParameter("txtbuscar");
-                List<Cliente> lista = busca.Buscar(dato);
+                List<Cliente> lista  = busca.Buscar(dato);
                 request.setAttribute("datos", lista); 
-                request.getRequestDispatcher("listarcliente.jsp").forward(request, response);
+                request.getRequestDispatcher("buscarcliente.jsp").forward(request, response);
                 break;
                            
-            default:            
+            default:           
                 
                 request.setAttribute("producto1", producto);                 
                 request.getRequestDispatcher("empmenu.jsp").forward(request, response);

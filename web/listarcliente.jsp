@@ -23,8 +23,8 @@
                     <a class="btn btn-outline-danger" href="empmenu.jsp">Volver</a>                   
                 </div>
                 <form class="form" action="ControladorEmp">
-                    <input type="text" name="txtbuscar" >
-                    <input type="submit" value="Buscar" class="btn btn-outline-warning"">
+                    <input type="search" name="txtbuscar" >
+                    <input type="submit" name="accion" value="Buscar" class="btn btn-outline-warning"">
                 </form>
                 
                 
@@ -51,15 +51,13 @@
                             ClienteService cli = new ClienteService();
                             List<Cliente> datos = cli.listar();
                             for(Cliente u:datos)
-                            {
-
-                            
+                            {                        
                             
                                                           
                             
                         %>                                              
                             <tr>
-                                <td><%= u.getIdCliente()%><%= u.getIdCliente()%></td>
+                                <td><%= u.getIdCliente()%></td>
                                 <td><%= u.getApellidos()%></td>
                                 <td><%= u.getDireccion()%></td>
                                 <td><%= u.getEmail()%></td>
@@ -69,6 +67,7 @@
                                 <td><%= u.getTelefono()%></td>
                                 <td><%= u.getUsuario()%></td>
                                 
+                      
                              
                                 <td>
                                     <a class="btn btn-outline-warning">Editar</a>
@@ -77,6 +76,8 @@
                                 </td>
                                 
                                 <% }%>
+                                
+                            
                                 
                 </div>
                 </div>
