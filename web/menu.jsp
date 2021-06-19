@@ -11,8 +11,8 @@
     <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-        <img src="img/logo3.png" style="height: 70px; width: 200px; background: white"/></a>
+    <a class="navbar-brand" href="Controlador?accion=home">
+        <img src="img/logomini.png" style="height: 70px; width: 200px; background: white"/></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
