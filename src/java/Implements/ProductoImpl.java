@@ -128,12 +128,12 @@ public class ProductoImpl {
     }
     
     
-    public List CategoriaCarnes(){
+    public List CategoriaAceites(){
         List<Producto> lista = new ArrayList<>();
         String sql = "select pr.id_producto, pr.descripcion, pr.imagen, pr.nombre, pr.precio, pr.stock \n" +
         "FROM producto pr\n" +
         "inner join categoria cate ON pr.id_categoria = cate.id_categoria\n" +
-        "WHERE cate.nombre = 'carnes'\n" +
+        "WHERE cate.nombre = 'Aceites'\n" +
         "ORDER BY id_producto DESC";
         try{
          con=cn.Conexion();   

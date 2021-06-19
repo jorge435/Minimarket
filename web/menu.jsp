@@ -12,15 +12,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="Controlador?accion=home">
-        <img src="img/logomini.png" style="height: 70px; width: 200px; background: white"/></a>
+        <img src="img/mini1.png" style="height: 80px; width: 200px; background: white"/></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Controlador?accion=home" style="font-size: 1.3em;">Home<span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item">
       <div class="dropdown me-3" style="margin-left:20px;">
         <button  style="border: none; font-size: 1.3em;"class="btn btn-outline-light   dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,24 +61,26 @@
       </form>
       <div class="dropdown-divider"></div>
         </div>
+          
       </div>
         
         </li>
-        
-        <li class="nav-item">
-          <a class="nav-link active" href="Controlador?accion=carrito" tabindex="-1" aria-disabled="true">
-              <i class="fas fa-cart-plus">(<label style="color: #e65c00">${cont}</label>)</i>
-           </a>
-        </li>
-        
+       
        </ul>
         
-       <form class="d-flex" style="margin-right: 120px; width: 770px ; height: 60px;" action="Controlador">
-        <input class="form-control me-1" type="search"  name="txtbuscar" placeholder="Buscar Productos" aria-label="Search">
+       <form class="d-flex" style="margin-right: 120px; width: 810px ; height: 60px; border-radius: 20px" action="Controlador">
+        <input class="form-control me-1" type="search"  name="txtbuscar" placeholder="¿Qué estas buscando?" aria-label="Search">
         <button class="btn btn-outline-light" type="submit" name="accion" value="Buscar" style="border: none">Buscar</button>
        </form>
         
-       <div class="dropdown me-3">
+        <li class="d-flex" style="margin-right:10px" >
+          <a class="nav-link active" href="Controlador?accion=carrito" tabindex="-1" aria-disabled="true">
+              <i style="color: white" class="fas fa-cart-plus">(<label style="color: #e65c00">${cont}</label>)</i>
+           </a>
+        </li>
+        
+        
+       <div class="dropdown me-3" style="margin-left:1px" >
         <button  style="border: none"
                  class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           ${cliente.getNombre()}
@@ -89,7 +88,7 @@
         <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="#">${cliente.getUsuario()}</a>
           <a class="dropdown-item" href="#">${cliente.getApellidos()}</a>
-          <a class="dropdown-item" href="login.jsp" >Salir</a>
+          <a class="dropdown-item" href="login.jsp" >Cerrar Sesión</a>
         </div>
       </div>            
               

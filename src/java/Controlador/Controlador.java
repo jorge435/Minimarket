@@ -162,8 +162,8 @@ public class Controlador extends HttpServlet {
                 request.getRequestDispatcher("menu.jsp").forward(request, response);
                 break; 
                 
-                case "Carnes":
-                List<Producto> lista2  = buscarproducto.CategoriaCarnes();
+                case "Aceites":
+                List<Producto> lista2  = buscarproducto.CategoriaAceites();
                 request.setAttribute("producto", lista2); 
                 request.getRequestDispatcher("menu.jsp").forward(request, response);
                 break; 
