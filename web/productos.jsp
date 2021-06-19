@@ -1,5 +1,6 @@
 
-<%@page import="modelo.Categoria"%>
+<%@page import="Servicios.CategoriaServicios"%>
+<%@page import="webservices.CategoriaRest"%>
 <%@page import="java.util.List"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -60,26 +61,38 @@
                         </div>
                         <div class="card-body">
                             <label>Nombre</label>
-                            <input type="text" class="form-control text-center">
+                            <input type="text"  name="txtnombre" class="form-control text-center">
                             <label>Imagen</label>
-                            <input type="text" class="form-control text-center">
+                            <input type="text"  name="txtimg" class="form-control text-center">
                             <label>Descripcion</label>
-                            <input type="text" class="form-control text-center">
+                            <input type="text" name="txtdesp" class="form-control text-center">
                             <label>Precio</label>
-                            <input type="text" class="form-control text-center">
-                            <label>Cantidad</label>
-                            <input type="text" class="form-control text-center">
+                            <input type="text" name="txtpre" class="form-control text-center">
+                            <label>Stock</label>
+                            <input type="text" name="txtcanti" class="form-control text-center">
                             <label>Categoria</label>
-                            <select class="form-control" id="cboCategoriaProducto" name="cboCategoriaProducto">
+                            <select  name="categoria" class="form-control text-center"> 
+                            <%
+                                CategoriaServicios cate = new CategoriaServicios();
+                                List<CategoriaRest> c = cate.listarcategoria();
+                                    
+                                for(CategoriaRest u:c)
+                            { 
+                            %> 
+                            <option value="<%= u.getIdCategoria()%>"><%= u.getNombre()%></option>
                             
+                            <% }%>  
                             </select>
                             
                             </div>
+                            
+                        </div>
                         <div class="card-footer">
-                            <a href="Controlador?accion=GenerarCompra" class="btn btn-dark btn-block">Registrar</a>
+                            <a href="ControladorEmp?accion=RegistrarProducto" class="btn btn-dark btn-block">Registrar</a>
                             <a href="#" class="btn btn-outline-dark btn-block">Editar</a>
                         </div>
                     </div>
+                           
                 </div>
       
         

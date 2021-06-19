@@ -8,9 +8,17 @@
 
 <xs:element name="addResponse" type="tns:addResponse"/>
 
+<xs:element name="addproducto" type="tns:addproducto"/>
+
+<xs:element name="addproductoResponse" type="tns:addproductoResponse"/>
+
 <xs:element name="listar" type="tns:listar"/>
 
 <xs:element name="listarResponse" type="tns:listarResponse"/>
+
+<xs:element name="listarcategoria" type="tns:listarcategoria"/>
+
+<xs:element name="listarcategoriaResponse" type="tns:listarcategoriaResponse"/>
 
 <xs:element name="listarid" type="tns:listarid"/>
 
@@ -78,6 +86,40 @@
 </xs:complexType>
 
 <xs:complexType name="addResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarcategoria">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listarcategoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:categoriaRest" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="categoriaRest">
+<xs:sequence>
+<xs:element name="id_categoria" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addproducto">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="imagen" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="precio" type="xs:string" minOccurs="0"/>
+<xs:element name="stock" type="xs:string" minOccurs="0"/>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addproductoResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>

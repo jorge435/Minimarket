@@ -4,6 +4,7 @@ package Controlador;
 import Implements.CategoriaImpl;
 import Implements.ProductoImpl;
 import Servicios.ClienteService;
+import Servicios.ProductoService;
 import Usuario.Empleado;
 import Usuario.EmpleadoValidar;
 import Usuario.UsuarioValidar;
@@ -38,6 +39,9 @@ public class ControladorEmp extends HttpServlet {
     //categoriascombo
     CategoriaImpl combo = new CategoriaImpl();
     List<Categoria> categoria = new ArrayList<>();
+    //producto servicio
+    
+    ProductoService proservice = new ProductoService();
    
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -65,14 +69,19 @@ public class ControladorEmp extends HttpServlet {
             case "Producto":
                 request.setAttribute("producto2", producto);
                 request.getRequestDispatcher("productos.jsp").forward(request, response);
-                break;
-            case "ComboCategorias":
-                List<Categoria> listaCategoria = combo.listarcategorias(); 
-                request.setAttribute("categorias", listaCategoria);
-        // en que JSP esta el combobox        
-                request.getRequestDispatcher("productos.jsp").forward(request, response);
-                break;    
+                break;         
                 
+            case "RegistrarProducto":
+                String descripcion = request.getParameter("txtdesp");
+                String img = request.getParameter("txtimg");
+                String nombre = request.getParameter("txtnombre");
+                String precio = request.getParameter("txtpre");
+                String stock = request.getParameter("txtcanti");
+                String categ = request.getParameter("categoria");
+                proservice.addproducto(descripcion, img, nombre, precio, stock, categ);
+                request.setAttribute("producto2", producto);
+                request.getRequestDispatcher("productos.jsp").forward(request, response);
+                break;                
             default:         
                 
                 request.setAttribute("producto1", producto);                 

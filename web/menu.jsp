@@ -26,7 +26,7 @@
         <button  style="border: none; font-size: 1.3em;"class="btn btn-outline-light   dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
              Categorias
         </button>
-        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+      <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
       <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
         <button class="btn btn-outline-dark" type="submit" name="accion" value="Bebidas" style="background: white; color: black; border: none" >Bebidas</button>
       </form>
