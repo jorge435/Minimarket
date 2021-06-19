@@ -24,7 +24,7 @@
             <a class="nav-link active" href="ControladorEmp?accion=ListarCliente">Cliente</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="ControladorEmp?accion="> Productos</a>
+            <a class="nav-link active" href="ControladorEmp?accion=Producto"> Productos</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" href="ControladorEmp?accion=">Proveedores</a>
@@ -47,8 +47,19 @@
         button class="btn btn-outline-light" type="submit">Buscar</button
        </form>--%>
         
-        <div class="dropdown me-3" style="left: 900px;">
-        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        
+        <div class="btn-group dropstart" style="margin-left: 870px;">
+        <button  style="border: none;"class="btn btn-outline-light   dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-window-close"></i>
+        </button>
+        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">        
+            <a class="dropdown-item" href="login.jsp">Salir</a>
+        </div>     
+        </div>
+        
+        <%--
+        <div class="dropdown me-3"  style="left: 850px; ">
+            <button style="border: none" class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           ${empleado.getNombre()}
         </button>
         <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
@@ -57,9 +68,9 @@
           <a class="dropdown-item" href="login.jsp">Salir</a>
         </div>
       </div>            
-              
+          --%>    
        
-    </div>
+    
   </div>
 </nav>   
      
