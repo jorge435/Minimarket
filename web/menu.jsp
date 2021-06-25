@@ -83,7 +83,7 @@
         </li>
         
         
-       <div class="dropdown me-3" style="margin-left:1px" >
+       <div class="dropdown me-3 dropstart" style="margin-left:1px" >
         <button  style="border: none"
                  class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
           ${cliente.getNombre()}
