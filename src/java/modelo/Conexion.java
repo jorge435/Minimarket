@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class Conexion {
     //private static String bd ="bd_minimarket";
     private static String user ="root";
-    private static String pass = "12345678";
+    private static String pass = "12345";
     private static String url= "jdbc:mysql://localhost:3306/bd_minimarket?characterEncoding=latin1";
     
     
