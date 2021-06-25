@@ -1,6 +1,7 @@
 
 package Controlador;
 
+import Implements.CompraImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -13,6 +14,10 @@ import modelo.Carrito;
 import modelo.Producto;
 import Implements.ProductoImpl;
 import Implements.ProductoMayorMenor;
+import modelo.Cliente;
+import modelo.Compra;
+import modelo.Fecha;
+import modelo.Pago;
 
 
 public class Controlador extends HttpServlet {
@@ -193,6 +198,20 @@ public class Controlador extends HttpServlet {
                                     listacarrito.remove(i);
                               }
                         }   
+                break;
+                
+                case "GenerarCompra":
+                Cliente cliente = new Cliente();
+                cliente.setId_cliente(1);
+                //Pago pago = new Pago();
+                CompraImpl compradao= new CompraImpl();
+                Compra compra = new Compra(cliente,1, "cancelado",Fecha.FechaBD(), totalPagar, listacarrito);
+                int res=compradao.GenerarCompra(compra);
+                if(res!=0&&totalPagar>0){
+                    request.getRequestDispatcher("mensaje.jsp").forward(request, response);
+                }else{
+                    request.getRequestDispatcher("mensaje.jsp").forward(request, response);
+                }
                 break;
                         
                 default:

@@ -6,20 +6,20 @@ import java.util.List;
 public class Compra {
     
     private int id_compra;
-    private int id_cliente;
+    private Cliente cliente;
     private int id_pago;
     private String Estado;
     private String FechaCompra;
-    private double monto;
+    private Double monto;
     
     private List<Carrito> detallecompras;
 
     public Compra() {
     }
 
-    public Compra( int id_cliente, int id_pago, String Estado, String FechaCompra, double monto, List<Carrito> detallecompras) {
+    public Compra( Cliente cliente, int id_pago, String Estado, String FechaCompra, Double monto, List<Carrito> detallecompras) {
         
-        this.id_cliente = id_cliente;
+        this.cliente = cliente;
         this.id_pago = id_pago;
         this.Estado = Estado;
         this.FechaCompra = FechaCompra;
@@ -27,20 +27,14 @@ public class Compra {
         this.detallecompras = detallecompras;
     }
 
-    public int getId_compra() {
-        return id_compra;
+   
+
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setId_compra(int id_compra) {
-        this.id_compra = id_compra;
-    }
-
-    public int getId_cliente() {
-        return id_cliente;
-    }
-
-    public void setId_cliente(int id_cliente) {
-        this.id_cliente = id_cliente;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public int getId_pago() {
@@ -67,11 +61,11 @@ public class Compra {
         this.FechaCompra = FechaCompra;
     }
 
-    public double getMonto() {
+    public Double getMonto() {
         return monto;
     }
 
-    public void setMonto(double monto) {
+    public void setMonto(Double monto) {
         this.monto = monto;
     }
 
@@ -82,6 +76,7 @@ public class Compra {
     public void setDetallecompras(List<Carrito> detallecompras) {
         this.detallecompras = detallecompras;
     }
+
     
     
     
