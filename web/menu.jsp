@@ -25,15 +25,18 @@
         </button>
       <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
       <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Bebidas" style="background: white; color: black; border: none" >Bebidas</button>
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Bebidas" style="background: white; color: black; border: none" >
+            <i class="fas fa-wine-bottle" style="margin-right:10px"></i>Bebidas</button>
       </form>
       <div class="dropdown-divider"></div>      
       <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Carnes" style="background: white; color: black; border: none" >Carnes</button>
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Carnes" style="background: white; color: black; border: none" >
+            <i class="fas fa-drumstick-bite" style="margin-right:10px"></i>Carnes</button>
       </form>  
       <div class="dropdown-divider"></div>
       <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >
+            <i class="fas fa-blender" style="margin-right:10px"></i>Lacteos</button>
       </form> 
       <div class="dropdown-divider"></div>
       <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
@@ -68,10 +71,10 @@
        
        </ul>
         
-       <form class="d-flex" style="margin-right: 120px; width: 810px ; height: 60px; border-radius: 20px" action="Controlador">
-        <input class="form-control me-1" type="search"  name="txtbuscar" placeholder="¿Qué estas buscando?" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit" name="accion" value="Buscar" style="border: none">Buscar</button>
-       </form>
+       <form class="d-flex" style="margin-right: 120px; width: 770px ; height: 60px; border-radius: 20px" action="Controlador">
+        <input class="form-control me-1" type="search"  name="txtbuscar" placeholder="Buscar Productos" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit" name="accion" value="Buscar" style="border: none"><i class="fab fa-searchengin"></i></button>
+        </form>
         
         <li class="d-flex" style="margin-right:10px" >
           <a class="nav-link active" href="Controlador?accion=carrito" tabindex="-1" aria-disabled="true">

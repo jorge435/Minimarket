@@ -84,8 +84,10 @@
                                     </td>   
                                     <td>${c.getSubTotal()}</td>                           
                                     <td class="text-center">                                         
+                                        
                                         <input type="hidden" id="idp1" value="${c.getIdProduct()}">
-                                        <a  href="Controlador?accion=Delete&idp=${c.getItem()}" id="btnDelete"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="#" id="btnDelete"><i class="fas fa-trash-alt" ></i></a>
+                                        <!--a  href="Controlador?accion=Delete&idp=${c.getItem()}" id="btnDelete"><i class="fas fa-trash-alt"></i></a-->
                                                                                 
                                     </td>                           
                                 </tr>
@@ -118,14 +120,13 @@
         </div>      
           
     </body> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"> </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="js/cantidad.js" type="text/javascript"></script>
-    
+    <script src="js/funciones.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
    
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-   
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </html>

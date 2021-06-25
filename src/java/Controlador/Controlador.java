@@ -185,6 +185,15 @@ public class Controlador extends HttpServlet {
                 request.setAttribute("producto", lista5); 
                 request.getRequestDispatcher("menu.jsp").forward(request, response);
                 break;
+                
+                case "Delete2":
+                int idproducto2= Integer.parseInt(request.getParameter("idp1"));
+                for (int i = 0; i <listacarrito.size(); i++) {
+                              if(listacarrito.get(i).getIdProduct()==idproducto2){
+                                    listacarrito.remove(i);
+                              }
+                        }   
+                break;
                         
                 default:
                     request.setAttribute("producto", producto);                 
