@@ -16,8 +16,7 @@
                 <img src="img/bg.svg">
             </div>
             <div class="login-content">
-                <form action="Servicios">
-                    <h1 class="title">Completa el siguiente formulario</h1>
+                <form action="Servicios">                    
                     <hr><br>
                     <div class="input-div one">
                         <div class="i">
@@ -71,7 +70,7 @@
                         </div>
                         <div class="div">
                             <h5>Direccion</h5>
-                            <input type="password" name="txtdirec" class="input">
+                            <input type="text" name="txtdirec" class="input">
                         </div>
                     </div>
                     
@@ -81,7 +80,7 @@
                         </div>
                         <div class="div">
                             <h5>Email</h5>
-                            <input type="password" name="txtemail" class="input">
+                            <input type="text" name="txtemail" class="input">
                         </div>
                     </div>
                     
@@ -91,7 +90,7 @@
                         </div>
                         <div class="div">
                             <h5>Telefoo</h5>
-                            <input type="password" name="txtef" class="input">
+                            <input type="text" name="txtef" class="input">
                         </div>
                     </div>
                     
