@@ -17,7 +17,7 @@
             </div>
             <div class="login-content">
                 <form action="Servicios">                    
-                    <hr><br>
+                    <br>
                     <div class="input-div one">
                         <div class="i">
                             <i class="fas fa-user"></i>
