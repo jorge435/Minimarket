@@ -38,6 +38,29 @@ public class UsuarioValidar {
         }
         return u;
     }
+    public Usuario ConseguirName(){
+        Usuario u = new Usuario();
+        String sql = "select * from clientes";
+        try{
+               con=cn.Conexion();
+               ps=con.prepareStatement(sql);               
+               rs=ps.executeQuery();
+               while(rs.next()){
+                   
+                   u.setUsuario(rs.getString("usuario"));
+                   u.setPassword(rs.getString("password"));
+                   u.setNombre(rs.getString("nombre"));
+                   u.setApellidos(rs.getString("apellidos"));
+                   u.setEmail(rs.getString("email"));
+                   u.setNum_doc(rs.getString("num_doc"));
+                   u.setTelefono(rs.getString("telefono"));
+                   u.setDireccion(rs.getString("direccion"));
+               }
+        }catch(Exception e){
+            e.getMessage();
+        }
+        return u;
+    }
     
     public List Buscar (String name){
         List<Cliente> lista = new ArrayList<>();

@@ -14,6 +14,8 @@ import modelo.Carrito;
 import modelo.Producto;
 import Implements.ProductoImpl;
 import Implements.ProductoMayorMenor;
+import Usuario.Usuario;
+import Usuario.UsuarioValidar;
 import modelo.Cliente;
 import modelo.Compra;
 import modelo.Fecha;
@@ -42,13 +44,20 @@ public class Controlador extends HttpServlet {
     //ODENAR MAYOR A MENOR
     ProductoMayorMenor meyormenor= new ProductoMayorMenor();
     
+    //usuariopaso de datos
+    UsuarioValidar udao2 = new UsuarioValidar();
+    Usuario u2 = new Usuario();
     
-
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {        
             String accion = request.getParameter("accion");
             producto=pimpl.listarproductos();
-            switch (accion) {                
+            switch (accion) {  
+                
+                case "pasardatos":
+                    request.getRequestDispatcher("pago.jsp").forward(request, response);
+
+                    break;
                 case "Comprar":
                     totalPagar = 0.0;
                     idp = Integer.parseInt(request.getParameter("id"));
@@ -200,28 +209,42 @@ public class Controlador extends HttpServlet {
                         }   
                 break;
                 
-                case "GenerarCompra":
+                case "GenerarCompra":  
+                
                 Cliente cliente = new Cliente();
                 cliente.setId_cliente(1);
                 //Pago pago = new Pago();
                 CompraImpl compradao= new CompraImpl();
                 Compra compra = new Compra(cliente,1, "cancelado",Fecha.FechaBD(), totalPagar, listacarrito);
                 int res=compradao.GenerarCompra(compra);
-                if(res!=0&&totalPagar>0){
-                    request.getRequestDispatcher("mensaje.jsp").forward(request, response);
+                if(res!=0&&totalPagar>0){  
+                    //Controlador?accion=GenerarCompra
+                   //request.getRequestDispatcher("menu.jsp").forward(request, response);
                 }else{
-                    request.getRequestDispatcher("mensaje.jsp").forward(request, response);
+                   //request.getRequestDispatcher("menu.jsp").forward(request, response);
                 }
+                
+                
                 break;
-                        
+                
+                case "Pasadedatoscliente":
+                    u2=udao2.ConseguirName();
+                    request.setAttribute("clientepago", u2);     
+                    request.setAttribute("totalpago", totalPagar);
+                    request.getRequestDispatcher("pago.jsp").forward(request, response);
+                    break;
+                                
                 default:
                     request.setAttribute("producto", producto);                 
-                    request.getRequestDispatcher("menu.jsp").forward(request, response);    
+                    request.getRequestDispatcher("menu.jsp").forward(request, response);
+                    
                         
                     
             }
                      
         }
+
+    
     
     
 

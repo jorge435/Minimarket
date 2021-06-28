@@ -32,7 +32,7 @@ public class ValidarUsuario extends HttpServlet {
             em=emp.ValidarEmp(user, pass);
             if(u.getUsuario()!=null){
                 request.setAttribute("cliente", u);
-                request.getRequestDispatcher("Controlador?accion=home").forward(request, response);
+                request.getRequestDispatcher("Controlador?accion=home").forward(request, response);                
             }            
             else if(em.getUsuario()!=null){
                 request.setAttribute("empleado", em);
