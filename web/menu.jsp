@@ -30,40 +30,35 @@
       </form>
       <div class="dropdown-divider"></div>      
       <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Carnes" style="background: white; color: black; border: none" >
-            <i class="fas fa-drumstick-bite" style="margin-right:10px"></i>Carnes</button>
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Aceites" style="background: white; color: black; border: none" >
+            <i class="fas fa-oil-can" style="margin-right:10px"></i>Aceites</button>
       </form>  
       <div class="dropdown-divider"></div>
       <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >
-            <i class="fas fa-blender" style="margin-right:10px"></i>Lacteos</button>
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Arroz" style="background: white; color: black; border: none" >
+            <i class="fas fa-seedling" style="margin-right:10px"></i>Arroz</button>
       </form> 
       <div class="dropdown-divider"></div>
       <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Menestras" style="background: white; color: black; border: none" >
+            <i class="fas fa-leaf" style="margin-right:10px"></i> Menestras</button>
       </form>  
       <div class="dropdown-divider"></div>
       <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Yogurts" style="background: white; color: black; border: none" >
+            <i class="fas fa-prescription-bottle" style="margin-right:10px"></i>Yogurts</button>
       </form> 
       <div class="dropdown-divider"></div>
       <form class="d-flex" action="Controlador" style="margin-left:20px;">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Abarrotes" style="background: white; color: black; border: none" >
+            <i class="fas fa-shopping-basket"  style="margin-right:10px"></i> Abarrotes</button>
       </form>  
       <div class="dropdown-divider"></div>
       <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
-      </form>  
-      <div class="dropdown-divider"></div>
-      <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
-      </form>  
-      <div class="dropdown-divider"></div>
-      <form class="d-flex" action="Controlador" style="margin-left:20px; ">        
-        <button class="btn btn-outline-dark" type="submit" name="accion" value="Lacteos" style="background: white; color: black; border: none" >Lacteos</button>
-      </form>
-      <div class="dropdown-divider"></div>
-        </div>
+        <button class="btn btn-outline-dark" type="submit" name="accion" value="Licores" style="background: white; color: black; border: none" >
+            <i class="fas fa-glass-martini-alt" style="margin-right:10px"></i>Licores</button>
+      </form> 
+     </div>
           
       </div>
         </li>

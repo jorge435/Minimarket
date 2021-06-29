@@ -182,9 +182,33 @@ public class Controlador extends HttpServlet {
                 request.getRequestDispatcher("menu.jsp").forward(request, response);
                 break; 
                 
-                case "Lacteos":
-                List<Producto> lista3  = buscarproducto.CategoriaLacteos();
+                case "Arroz":
+                List<Producto> lista3  = buscarproducto.CategoriaArroz();
                 request.setAttribute("producto", lista3); 
+                request.getRequestDispatcher("menu.jsp").forward(request, response);
+                break;
+                
+                case "Menestras":
+                List<Producto> lista6  = buscarproducto.CategoriaMenestras();
+                request.setAttribute("producto", lista6); 
+                request.getRequestDispatcher("menu.jsp").forward(request, response);
+                break;
+                
+                case "Yogurts":
+                List<Producto> lista7  = buscarproducto.CategoriaYogurts();
+                request.setAttribute("producto", lista7); 
+                request.getRequestDispatcher("menu.jsp").forward(request, response);
+                break;
+                
+                case "Abarrotes":
+                List<Producto> lista8  = buscarproducto.CategoriaAbarrotes();
+                request.setAttribute("producto", lista8); 
+                request.getRequestDispatcher("menu.jsp").forward(request, response);
+                break;
+                
+                case "Licores":
+                List<Producto> lista9  = buscarproducto.CategoriaLicores();
+                request.setAttribute("producto", lista9); 
                 request.getRequestDispatcher("menu.jsp").forward(request, response);
                 break;
                 
@@ -209,7 +233,7 @@ public class Controlador extends HttpServlet {
                         }   
                 break;
                 
-                case "GenerarCompra":  
+                case "GenerarCompra": 
                 
                 Cliente cliente = new Cliente();
                 cliente.setId_cliente(1);

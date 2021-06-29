@@ -20,11 +20,14 @@
                
                 
                 <div class="card-header">
-                    <a class="btn btn-outline-danger" href="empmenu.jsp">Volver</a>                   
+                    <a class="btn btn-outline-danger" href="empmenu.jsp">Volver</a>  
+                    <h2 class="text-center">Cliente</h2>
                 </div>
+                
+                
                 <form class="form" action="ControladorEmp">
                     <input type="search" name="txtbuscar" >
-                    <input type="submit" name="accion" value="Buscar" class="btn btn-outline-warning">
+                    <input type="submit" name="accion" value="Buscar" class="btn btn-outline-dark">
                 </form>
                 
                 
@@ -70,8 +73,8 @@
                       
                              
                                 <td>
-                                    <a class="btn btn-outline-warning">Editar</a>
-                                    <a href="ControladorEmp?accion=Delete&id=<%= u.getIdCliente()%>" class="btn btn-outline-warning">Eliminar</a>
+                                    <a href="ControladorEmp?accion=Editar&id=<%= u.getIdCliente()%>" class="btn btn-outline-dark">Editar</a>
+                                    <a href="ControladorEmp?accion=Delete&id=<%= u.getIdCliente()%>" class="btn btn-outline-dark">Eliminar</a>
                                     
                                 </td>
                                 

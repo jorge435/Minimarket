@@ -76,7 +76,7 @@
                                         var idp=$(this).parent().find("#pagar").val();
                                         swal("Pago Realizado!", "Transaccion Exitosa!", "success")
                                         //parent.location.href="Controlador?accion=carrito";                                        
-                                        pago2020;
+                                        pago2020(idp);
                                   }
                                   function pago2020(idp) {
                                             var url="Controlador?accion=GenerarCompra";
@@ -86,8 +86,8 @@
                                                 data: "idp1="+idp,
                                                 success: function (data, textStatus, jqXHR) {
 
-                                                }
-                                            });
+                                   }
+                                 });
     }
                                 </script>                            
                                 <a href="#"  id="pagar" onclick="pago();" class="btn btn-dark btn-block">Realizar Pago</a>

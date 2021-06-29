@@ -23,6 +23,7 @@ import modelo.Producto;
 public class ControladorEmp extends HttpServlet {
     
     //productos
+    int id=0;
     Producto p = new Producto();
     ProductoImpl pimpl = new ProductoImpl();
     List<Producto> producto = new ArrayList<>();
@@ -66,6 +67,20 @@ public class ControladorEmp extends HttpServlet {
                 request.setAttribute("datos", lista); 
                 request.getRequestDispatcher("buscarcliente.jsp").forward(request, response);
                 break;
+            case "Editar":
+                request.setAttribute("iduser", request.getParameter("id"));
+                request.getRequestDispatcher("editcliente.jsp").forward(request, response);
+                break;
+            case "Actualizar":                
+                String correo=request.getParameter("txtcorreo");
+                String telefono=request.getParameter("txttele");
+                String usu=request.getParameter("txtusu");
+                String pass=request.getParameter("txtpass");                
+                int id2=Integer.parseInt(request.getParameter("txtid"));                 
+                cli.editarC(id2, usu, pass, telefono, correo);
+                request.getRequestDispatcher("editcliente.jsp").forward(request, response);
+                break;
+                
             case "Producto":
                 request.setAttribute("producto2", producto);
                 request.getRequestDispatcher("productos.jsp").forward(request, response);

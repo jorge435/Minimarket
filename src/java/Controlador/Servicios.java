@@ -35,6 +35,7 @@ public class Servicios extends HttpServlet {
             String telefono = request.getParameter("txtef");
             String usuario = request.getParameter("txtuser");
             cliservice.add(apellidos, direccion, email, nombre, numDoc, password, telefono, usuario);
+            
         }
         request.getRequestDispatcher("login.jsp").forward(request, response);
         

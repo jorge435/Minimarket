@@ -10,6 +10,18 @@
 <message name="addResponse">
 <part name="parameters" element="tns:addResponse"/>
 </message>
+<message name="listar">
+<part name="parameters" element="tns:listar"/>
+</message>
+<message name="listarResponse">
+<part name="parameters" element="tns:listarResponse"/>
+</message>
+<message name="Eliminar">
+<part name="parameters" element="tns:Eliminar"/>
+</message>
+<message name="EliminarResponse">
+<part name="parameters" element="tns:EliminarResponse"/>
+</message>
 <message name="addproducto">
 <part name="parameters" element="tns:addproducto"/>
 </message>
@@ -22,28 +34,30 @@
 <message name="listarcategoriaResponse">
 <part name="parameters" element="tns:listarcategoriaResponse"/>
 </message>
-<message name="Eliminar">
-<part name="parameters" element="tns:Eliminar"/>
-</message>
-<message name="EliminarResponse">
-<part name="parameters" element="tns:EliminarResponse"/>
-</message>
-<message name="listar">
-<part name="parameters" element="tns:listar"/>
-</message>
-<message name="listarResponse">
-<part name="parameters" element="tns:listarResponse"/>
-</message>
 <message name="listarid">
 <part name="parameters" element="tns:listarid"/>
 </message>
 <message name="listaridResponse">
 <part name="parameters" element="tns:listaridResponse"/>
 </message>
+<message name="EditarC">
+<part name="parameters" element="tns:EditarC"/>
+</message>
+<message name="EditarCResponse">
+<part name="parameters" element="tns:EditarCResponse"/>
+</message>
 <portType name="Servidor">
 <operation name="add">
 <input wsam:Action="http://WebServices/Servidor/addRequest" message="tns:add"/>
 <output wsam:Action="http://WebServices/Servidor/addResponse" message="tns:addResponse"/>
+</operation>
+<operation name="listar">
+<input wsam:Action="http://WebServices/Servidor/listarRequest" message="tns:listar"/>
+<output wsam:Action="http://WebServices/Servidor/listarResponse" message="tns:listarResponse"/>
+</operation>
+<operation name="Eliminar">
+<input wsam:Action="http://WebServices/Servidor/EliminarRequest" message="tns:Eliminar"/>
+<output wsam:Action="http://WebServices/Servidor/EliminarResponse" message="tns:EliminarResponse"/>
 </operation>
 <operation name="addproducto">
 <input wsam:Action="http://WebServices/Servidor/addproductoRequest" message="tns:addproducto"/>
@@ -53,17 +67,13 @@
 <input wsam:Action="http://WebServices/Servidor/listarcategoriaRequest" message="tns:listarcategoria"/>
 <output wsam:Action="http://WebServices/Servidor/listarcategoriaResponse" message="tns:listarcategoriaResponse"/>
 </operation>
-<operation name="Eliminar">
-<input wsam:Action="http://WebServices/Servidor/EliminarRequest" message="tns:Eliminar"/>
-<output wsam:Action="http://WebServices/Servidor/EliminarResponse" message="tns:EliminarResponse"/>
-</operation>
-<operation name="listar">
-<input wsam:Action="http://WebServices/Servidor/listarRequest" message="tns:listar"/>
-<output wsam:Action="http://WebServices/Servidor/listarResponse" message="tns:listarResponse"/>
-</operation>
 <operation name="listarid">
 <input wsam:Action="http://WebServices/Servidor/listaridRequest" message="tns:listarid"/>
 <output wsam:Action="http://WebServices/Servidor/listaridResponse" message="tns:listaridResponse"/>
+</operation>
+<operation name="EditarC">
+<input wsam:Action="http://WebServices/Servidor/EditarCRequest" message="tns:EditarC"/>
+<output wsam:Action="http://WebServices/Servidor/EditarCResponse" message="tns:EditarCResponse"/>
 </operation>
 </portType>
 <binding name="ServidorPortBinding" type="tns:Servidor">
@@ -77,6 +87,24 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="listar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="Eliminar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="addproducto">
 <soap:operation soapAction=""/>
 <input>
@@ -95,25 +123,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="Eliminar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="listar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="listarid">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="EditarC">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

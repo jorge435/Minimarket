@@ -28,8 +28,8 @@
     </target>
     <target name="wsimport-client-Servidor" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/Servidor"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Servidor" destdir="${build.generated.dir}/jax-wsCache/Servidor" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Servidor/wsdl/localhost_59640/ServiciosWeb/Servidor.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:59640/ServiciosWeb/Servidor?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Servidor/wsdl/localhost_59640/ServiciosWeb/Servidor.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Servidor" destdir="${build.generated.dir}/jax-wsCache/Servidor" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Servidor/wsdl/localhost_8080/ServidorMinimarket/Servidor.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ServidorMinimarket/Servidor?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Servidor/wsdl/localhost_8080/ServidorMinimarket/Servidor.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/Servidor"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">

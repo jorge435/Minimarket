@@ -89,16 +89,36 @@
                             <i class="fas fa-lock"></i>
                         </div>
                         <div class="div">
-                            <h5>Telefoo</h5>
+                            <h5>Telefono</h5>
                             <input type="text" name="txtef" class="input">
                         </div>
                     </div>
-                    
-                    <input type="submit" class="btn" name="accion" value="Guardar">
+                    <script>
+                                    function registro(){
+                                        var idp=$(this).parent().find("#pagar").val();
+                                        swal("Pago Realizado!", "Transaccion Exitosa!", "success")
+                                        //parent.location.href="Controlador?accion=carrito";                                        
+                                        pago2020(idp);
+                                  }
+                                  function pago2020(idp) {
+                                            //var url="Servicios?accion=Guardar";
+                                            $.ajax({
+                                                type: 'POST',
+                                                url: url,
+                                                data: "idp1="+idp,
+                                                success: function (data, textStatus, jqXHR) {
+
+                                   }
+                                 });
+    }
+                    </script>
+                    <input id="pagar" onclick="registro();" type="submit" class="btn" name="accion" value="Guardar">
                     <a href="login.jsp">Regresar</a>
                 </form>
             </div>
         </div>
         <script type="text/javascript" src="js/Registro_Cliente.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     </body>
 </html>

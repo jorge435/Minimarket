@@ -101,7 +101,7 @@ public class ProductoImpl {
         String sql = "select pr.id_producto, pr.descripcion, pr.imagen, pr.nombre, pr.precio, pr.stock \n" +
         "FROM producto pr\n" +
         "inner join categoria cate ON pr.id_categoria = cate.id_categoria\n" +
-        "WHERE cate.nombre = 'bebidas'\n" +
+        "WHERE cate.nombre = 'Bebidas'\n" +
         "ORDER BY id_producto DESC";
         try{
          con=cn.Conexion();   
@@ -160,12 +160,139 @@ public class ProductoImpl {
     }
     
     
-    public List CategoriaLacteos(){
+    public List CategoriaArroz(){
         List<Producto> lista = new ArrayList<>();
         String sql = "select pr.id_producto, pr.descripcion, pr.imagen, pr.nombre, pr.precio, pr.stock \n" +
         "FROM producto pr\n" +
         "inner join categoria cate ON pr.id_categoria = cate.id_categoria\n" +
-        "WHERE cate.nombre = 'lacteos'\n" +
+        "WHERE cate.nombre = 'Arroz'\n" +
+        "ORDER BY id_producto DESC";
+        try{
+         con=cn.Conexion();   
+         ps=con.prepareStatement(sql);
+         rs=ps.executeQuery();
+         while(rs.next()){  
+                   Producto p = new Producto();
+                   p.setIdproducto(rs.getInt("id_producto"));
+                   p.setDescripcion(rs.getString("descripcion"));
+                   p.setImagen(rs.getString("imagen"));
+                   p.setNombre(rs.getString("nombre"));
+                   p.setPrecio(rs.getDouble("precio"));
+                   p.setStock(rs.getInt("stock"));
+                   
+                   lista.add(p);                   
+               }
+        
+        }catch(Exception e){
+            e.getMessage();
+        }
+        return lista;
+             
+                  
+    }
+    
+    public List CategoriaMenestras(){
+        List<Producto> lista = new ArrayList<>();
+        String sql = "select pr.id_producto, pr.descripcion, pr.imagen, pr.nombre, pr.precio, pr.stock \n" +
+        "FROM producto pr\n" +
+        "inner join categoria cate ON pr.id_categoria = cate.id_categoria\n" +
+        "WHERE cate.nombre = 'Menestras'\n" +
+        "ORDER BY id_producto DESC";
+        try{
+         con=cn.Conexion();   
+         ps=con.prepareStatement(sql);
+         rs=ps.executeQuery();
+         while(rs.next()){  
+                   Producto p = new Producto();
+                   p.setIdproducto(rs.getInt("id_producto"));
+                   p.setDescripcion(rs.getString("descripcion"));
+                   p.setImagen(rs.getString("imagen"));
+                   p.setNombre(rs.getString("nombre"));
+                   p.setPrecio(rs.getDouble("precio"));
+                   p.setStock(rs.getInt("stock"));
+                   
+                   lista.add(p);                   
+               }
+        
+        }catch(Exception e){
+            e.getMessage();
+        }
+        return lista;
+             
+                  
+    }
+    
+    
+    public List CategoriaYogurts(){
+        List<Producto> lista = new ArrayList<>();
+        String sql = "select pr.id_producto, pr.descripcion, pr.imagen, pr.nombre, pr.precio, pr.stock \n" +
+        "FROM producto pr\n" +
+        "inner join categoria cate ON pr.id_categoria = cate.id_categoria\n" +
+        "WHERE cate.nombre = 'Yogurts'\n" +
+        "ORDER BY id_producto DESC";
+        try{
+         con=cn.Conexion();   
+         ps=con.prepareStatement(sql);
+         rs=ps.executeQuery();
+         while(rs.next()){  
+                   Producto p = new Producto();
+                   p.setIdproducto(rs.getInt("id_producto"));
+                   p.setDescripcion(rs.getString("descripcion"));
+                   p.setImagen(rs.getString("imagen"));
+                   p.setNombre(rs.getString("nombre"));
+                   p.setPrecio(rs.getDouble("precio"));
+                   p.setStock(rs.getInt("stock"));
+                   
+                   lista.add(p);                   
+               }
+        
+        }catch(Exception e){
+            e.getMessage();
+        }
+        return lista;
+             
+                  
+    }
+    
+    
+    public List CategoriaAbarrotes(){
+        List<Producto> lista = new ArrayList<>();
+        String sql = "select pr.id_producto, pr.descripcion, pr.imagen, pr.nombre, pr.precio, pr.stock \n" +
+        "FROM producto pr\n" +
+        "inner join categoria cate ON pr.id_categoria = cate.id_categoria\n" +
+        "WHERE cate.nombre = 'Abarrotes'\n" +
+        "ORDER BY id_producto DESC";
+        try{
+         con=cn.Conexion();   
+         ps=con.prepareStatement(sql);
+         rs=ps.executeQuery();
+         while(rs.next()){  
+                   Producto p = new Producto();
+                   p.setIdproducto(rs.getInt("id_producto"));
+                   p.setDescripcion(rs.getString("descripcion"));
+                   p.setImagen(rs.getString("imagen"));
+                   p.setNombre(rs.getString("nombre"));
+                   p.setPrecio(rs.getDouble("precio"));
+                   p.setStock(rs.getInt("stock"));
+                   
+                   lista.add(p);                   
+               }
+        
+        }catch(Exception e){
+            e.getMessage();
+        }
+        return lista;
+             
+                  
+    }
+    
+    
+    public List CategoriaLicores(){
+        List<Producto> lista = new ArrayList<>();
+        String sql = "select pr.id_producto, pr.descripcion, pr.imagen, pr.nombre, pr.precio, pr.stock \n" +
+        "FROM producto pr\n" +
+        "inner join categoria cate ON pr.id_categoria = cate.id_categoria\n" +
+        "WHERE cate.nombre = 'Licores'\n" +
         "ORDER BY id_producto DESC";
         try{
          con=cn.Conexion();   

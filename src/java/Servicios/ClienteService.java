@@ -32,6 +32,22 @@ public class ClienteService {
         webservices.Servidor port = service.getServidorPort();
         return port.listarid(id);
     }
+
+    public String editarC(int id, java.lang.String usu, java.lang.String pass, java.lang.String telefono, java.lang.String correo) {
+        webservices.Servidor_Service service = new webservices.Servidor_Service();
+        webservices.Servidor port = service.getServidorPort();
+        return port.editarC(id, usu, pass, telefono, correo);
+    }
+
+    
+
+   
+    
+    
+
+   
+    
+    
     
     
     

@@ -11,15 +11,13 @@
     <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">MiniMarket Express</a>
+    <a class="navbar-brand"  href="ControladorEmp?accion=home1"><img src="img/mini1.png" style="height: 80px; width: 200px; background: white"/></a></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="ControladorEmp?accion=home1">Inicio<span class="sr-only">(current)</span></a>
-        </li>
+        
         <li class="nav-item">
             <a class="nav-link active" href="ControladorEmp?accion=ListarCliente">Cliente</a>
         </li>
@@ -27,12 +25,14 @@
             <a class="nav-link active" href="ControladorEmp?accion=Producto"> Productos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="ControladorEmp?accion=">Proveedores</a>
+            <a class="nav-link active" href="ControladorEmp?accion=Empleado">Empleado</a>
         </li>
         
         <li class="nav-item">
             <a class="nav-link active" href="#">Config</a>
         </li>
+        </ul>
+        
         <%--
         <li class="nav-item">
           <a class="nav-link active" href="Controlador?accion=carrito" tabindex="-1" aria-disabled="true">
@@ -40,8 +40,7 @@
               Carrito</a>
         </li>
         
-       </ul>
-        
+       
        <form class="d-flex">
         <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
         button class="btn btn-outline-light" type="submit">Buscar</button
